@@ -1,0 +1,27 @@
+{
+   "key_theme": [
+      "Performance",
+      "Battery Life",
+      "S-Pen",
+      "Camera Quality",
+      "Ergonomics",
+      "Software",
+      "Pricing"
+   ],
+   "summary": "The Samsung Galaxy S24 Ultra is a high-performing smartphone with excellent battery life, fast charging, and an impressive 200MP camera, though it is held back slightly by its heavy weight, software bloatware, and expensive price tag.",
+   "sentiment": "pos",
+   "pros": [
+      "Lightning fast Snapdragon 8 Gen 3 processor",
+      "5000mAh battery lasts a full day with 45W fast charging",
+      "S-Pen integration for notes and sketches",
+      "Stunning 200MP camera with crisp night mode",
+      "Effective zoom up to 30x"
+   ],
+   "cons": [
+      "Uncomfortable for one-handed use due to size and weight",
+      "One UI includes duplicate Samsung bloatware apps",
+      "Expensive $1,300 price tag",
+      "Image quality degrades past 30x zoom"
+   ],
+   "name": null
+}

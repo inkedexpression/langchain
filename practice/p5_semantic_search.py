@@ -50,17 +50,22 @@ documents = [
 ]
 
 doc_embed = [model.embed_query(doc) for doc in documents]
-# this doc_embed is out of the loop bcz when time i asked question the loop will embed this doc once again which will
+# t%is doc_embed is out of the loop bcz when time i asked question the loop will embed this doc once again which will
 # increase the call of API
+try:
+    while True:
+        user_query = input("Enter the query ('exit' to quite) : ")
+        if user_query.lower() == 'exit':
+            break
 
-while True:
-    user_query = input("Enter the query ('exit' to quite) : ")
-    if user_query.lower() == 'exit':
-        break
+        query_embed = model.embed_query(user_query)
 
-    query_embed = model.embed_query(user_query)
+        score = cosine_similarity([query_embed],doc_embed)[0]
+        top5 = sorted(enumerate(score),key=lambda x:x[1],reverse=True)[:5]
+        for index , score in top5:
+            print(score)
+            print(documents[index])
+            print('-'*50)
 
-    score = cosine_similarity([query_embed],doc_embed)[0]
-    top5 = sorted(enumerate(score),key=lambda x:x[1],reverse=True)[:5]
-    for index , score in top5:
-        print(documents[index])
+except Exception as e:
+    print(e)
